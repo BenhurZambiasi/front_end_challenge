@@ -1,6 +1,7 @@
+import axios from 'axios';
+
 export async function getProducts() {
-  const result = await fetch(`${process.env.NEXT_PUBLIC_ROUTE_API}/staticData`);
-  const data = await result.json();
+  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_ROUTE_API}/staticData`);
 
   return data && JSON.parse(data);
 }
