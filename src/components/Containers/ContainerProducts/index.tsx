@@ -7,9 +7,10 @@ import styles from './Products.module.scss';
 interface IProps {
   products: TProduct[];
   handleAddToCart: (product: TProduct) => void;
+  showCart: () => void;
 }
 
-export const ContainerProducts: React.FC<IProps> = ({ products, handleAddToCart }) => {
+export const ContainerProducts: React.FC<IProps> = ({ products, handleAddToCart, showCart }) => {
   const [sortProducts, setSortProducts] = useState<number>(1);
 
   const filterProducts = useMemo(() => {
@@ -27,7 +28,11 @@ export const ContainerProducts: React.FC<IProps> = ({ products, handleAddToCart 
 
   return (
     <div className={styles.container}>
-      <HeaderContainerProducts sortProducts={sortProducts} setSortProducts={setSortProducts} />
+      <HeaderContainerProducts
+        sortProducts={sortProducts}
+        setSortProducts={setSortProducts}
+        showCart={showCart}
+      />
       <ContainerCardsProducts filterProducts={filterProducts} handleAddToCart={handleAddToCart} />
     </div>
   );

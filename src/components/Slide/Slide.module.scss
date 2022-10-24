@@ -1,0 +1,21 @@
+.container_slide {
+  position: fixed;
+  top: 100px;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  min-height: 50%;
+  -webkit-box-shadow: 6px 0px 15px -8px #000000;
+  box-shadow: 6px 6px 15px -8px #000000;
+  padding: 25px;
+  animation: slide 0.5s ease-out;
+
+  @keyframes slide {
+    from {
+      transform: translatex(-350px);
+    }
+    to {
+      transform: initial;
+    }
+  }
+}

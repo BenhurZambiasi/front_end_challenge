@@ -1,7 +1,7 @@
 .container {
   margin-top: 30px;
   background-color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
   .main {
     min-height: 100vh;
@@ -12,5 +12,10 @@
     max-width: 1150px;
     gap: 2rem;
     width: 100%;
+    @media (max-width: 768px) {
+      .container_shop_cart {
+        display: none;
+      }
+    }
   }
 }

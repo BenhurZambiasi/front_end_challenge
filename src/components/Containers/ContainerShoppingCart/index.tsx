@@ -20,19 +20,17 @@ export const ContainerShoppingCart: React.FC<IProps> = ({
   const itens = !emptyCar && `(${selectedProducts.length} itens)`;
 
   return (
-    <div className={styles.container_shop_cart}>
-      <div className={styles.container_cart}>
-        <HeaderCart itens={itens} />
+    <div className={styles.container_cart}>
+      <HeaderCart itens={itens} />
 
-        {!emptyCar ? (
-          <FullCartContainer
-            handleDeleteproduct={handleDeleteproduct}
-            selectedProducts={selectedProducts}
-          />
-        ) : (
-          <EmptyCart />
-        )}
-      </div>
+      {!emptyCar ? (
+        <FullCartContainer
+          handleDeleteproduct={handleDeleteproduct}
+          selectedProducts={selectedProducts}
+        />
+      ) : (
+        <EmptyCart />
+      )}
     </div>
   );
 };
