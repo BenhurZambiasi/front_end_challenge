@@ -1,0 +1,31 @@
+.info_payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #7f7575;
+    b {
+      color: #423b3b;
+      font-size: 20px;
+    }
+  }
+  button {
+    background-color: #54a3ff;
+    border-radius: 3px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

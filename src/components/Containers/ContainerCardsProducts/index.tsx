@@ -5,11 +5,14 @@ import styles from './ContainerCards.module.scss';
 
 interface IProps {
   filterProducts: TProduct[];
+  handleAddToCart: (product: TProduct) => void;
 }
 
-export const ContainerCardsProducts: React.FC<IProps> = ({ filterProducts }) => (
+export const ContainerCardsProducts: React.FC<IProps> = ({ filterProducts, handleAddToCart }) => (
   <div className={styles.container_cards}>
     {filterProducts &&
-      filterProducts.map((product, index) => <ProductCard key={product.id} product={product} />)}
+      filterProducts.map((product, index) => (
+        <ProductCard key={product.id} product={product} handleAddToCart={handleAddToCart} />
+      ))}
   </div>
 );

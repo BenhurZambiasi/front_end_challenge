@@ -1,0 +1,12 @@
+.header_car {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #363636;
+  .qtd_itens {
+    color: #7f7575;
+    font-size: 14px;
+  }
+}
