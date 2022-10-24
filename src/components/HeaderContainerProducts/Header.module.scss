@@ -1,0 +1,53 @@
+.container {
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  span {
+    img {
+      display: none !important;
+    }
+  }
+
+  .img_cart_mbl {
+    display: none;
+  }
+
+  span {
+    font-size: 3rem;
+    flex: 1;
+  }
+  select {
+    height: 40px;
+    width: 262px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    height: 100px;
+
+    span {
+      img {
+        display: flex !important;
+        filter: brightness(0.5);
+        cursor: pointer;
+      }
+      margin-right: 10px !important;
+    }
+
+    span {
+      flex: none;
+      width: 50%;
+      font-size: 2rem;
+    }
+  }
+}
