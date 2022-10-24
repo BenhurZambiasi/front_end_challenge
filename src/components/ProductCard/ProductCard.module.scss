@@ -1,0 +1,70 @@
+.content_cards {
+  width: 262px;
+  height: 280px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+
+  .add {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #3487dc;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+
+    .add_car {
+      display: none;
+    }
+
+    .info_card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+
+      .description {
+        color: #746a6a;
+        font-size: 1rem;
+      }
+      .price {
+        color: #3486e6;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      .add_car {
+        display: block;
+        cursor: pointer;
+        transition: all 0.3s;
+        padding: 0.5rem;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .info_card {
+        display: none;
+      }
+    }
+  }
+
+  .img_card {
+    padding: 25px 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+  }
+}
